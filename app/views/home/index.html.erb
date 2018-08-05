@@ -4,7 +4,7 @@
     <%= f.label 'Update status' %><br>
       <%= f.text_area :content, class: 'form-control', autofocus: true,
           placeholder: 'What\'s up?' %>
-      <%= f.file_field :attachment, class: 'form-control' %>
+      <%= f.file_field :image, class: 'form-control' %>
   </div>
   <%= f.submit :Post, class: 'btn btn-primary'%>
 <% end %>
@@ -12,6 +12,6 @@
 <ul><% @posts.each do |post| %>
   <li><%= post.user.email %></li>
   <li><%= post.content %></li>
-  <li><%= post.attachment %></li>
+  <li><%= post.image %></li>
   <li><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %></ul>

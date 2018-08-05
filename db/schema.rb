@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_131959) do
+ActiveRecord::Schema.define(version: 2018_08_05_143807) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "attachment"
+    t.string "image"
     t.text "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
