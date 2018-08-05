@@ -1,18 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @post.image %>
+  <%= @post.user.email %>
 </p>
 
 <p>
-  <strong>Content:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @post.email %>
+  <%= image_tag @post.image.url(:normal) unless @post.image.blank? %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
