@@ -1,12 +1,17 @@
+<%= link_to "Instasham", root_url %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 
 <ul><% @posts.each do |post| %>
-  <li><%= post.user.email %></li>
-  <li><%= post.content %></li>
-  <li><%= post.image_url %></li>
-  <li><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <div class="post">
+    <li><%= post.user.email %></li>
+    <li><%= post.content %></li>
+    <li><%= post.image_url %></li>
+    <li>Posted <%= time_ago_in_words(post.created_at) %> ago</li>
+    <li><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </div>
 <% end %></ul>
 
 <%= link_to 'New Post', new_post_path %>
