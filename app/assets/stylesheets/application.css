@@ -21,9 +21,28 @@
 
  li {
    margin: 10px 0px;
+ }
 
+ #content {
+   font-size: 14px;
+   font-weight: bold;
+ }
+
+ #timestamp {
+   font-size: 12px;
+   font-style: italic;
+ }
+
+ #email {
+   font-size: 12px;
+   font-weight: bold;
+ }
+
+ #navigation {
+   border-bottom: 3px solid;
  }
 
  .post {
    margin: 30px 0px;
+   border-bottom: 0.5px solid;
  }

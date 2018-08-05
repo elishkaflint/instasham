@@ -1,3 +1,14 @@
+<div id="navigation">
+  <p><%= link_to "Instasham", posts_path %></p>
+  <% if @current_user %>
+    <p>Logged in as <%= @current_user.email %></p>
+    <p><%= link_to "Log Out", destroy_user_session_path, method: :delete %></p>
+  <% else %>
+    <p><%= link_to "Sign Up", new_user_registration_path %></p>
+    <p><%= link_to "Log In", new_user_session_path %></p>
+  <% end %>
+</div>
+
 <h1>New Post</h1>
 
 <%= form_for(@post) do |f| %>
