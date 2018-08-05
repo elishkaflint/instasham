@@ -1,20 +1,5 @@
-<%= link_to "Instasham", root_url %>
-<%= form_for(@post) do |f| %>
-  <div class="form-group">
-    <%= f.label 'Update status' %><br>
-      <%= f.text_area :content, class: 'form-control', autofocus: true,
-          placeholder: 'What\'s up?' %>
-      <%= f.file_field :image, class: 'form-control' %>
-  </div>
-  <%= f.submit :Post, class: 'btn btn-primary'%>
-<% end %>
+<p><%= link_to "Instasham", posts_path %></p>
 
-<ul><% @posts.each do |post| %>
-  <div class="post">
-    <li><%= post.user.email %></li>
-    <li><%= post.content %></li>
-    <li><%= image_tag post.image.url(:normal) unless post.image.blank? %></li>
-    <li><%= time_ago_in_words(post.created_at) %></li>
-    <li><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-  </div>
-<% end %></ul>
+<p><%= link_to "Log In", new_user_session_path %></p>
+
+<p><%= link_to "Sign Up", new_user_registration_path %></p>
