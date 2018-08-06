@@ -38,7 +38,11 @@
    font-weight: bold;
  }
 
- #navigation {
+ #logo {
+   font-size: 40px;
+ }
+
+ .navigation {
    border-bottom: 3px solid;
  }
 

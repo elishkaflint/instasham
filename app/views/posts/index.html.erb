@@ -1,4 +1,4 @@
-<div id="navigation">
+<div class="navigation">
   <p><%= link_to "Instasham", posts_path %></p>
   <% if @current_user %>
     <p>Logged in as <%= @current_user.email %></p>
@@ -13,7 +13,9 @@
 
 <h1>Posts</h1>
 
-<%= link_to 'New Post', new_post_path %>
+<% if @current_user %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
 
 <ul><% @posts.each do |post| %>
   <div class="post">
